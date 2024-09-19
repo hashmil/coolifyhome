@@ -1,5 +1,5 @@
-# Use the official Node.js 18 image as a parent image
-FROM node:18-alpine
+# Use the official Node.js 20 image as a parent image
+FROM node:20-alpine
 
 # Set the working directory
 WORKDIR /app
@@ -7,8 +7,8 @@ WORKDIR /app
 # Copy package.json and package-lock.json
 COPY package*.json ./
 
-# Install dependencies
-RUN npm ci
+# Install dependencies with --legacy-peer-deps to ensure compatibility
+RUN npm install --legacy-peer-deps
 
 # Copy the rest of your app's source code
 COPY . .
