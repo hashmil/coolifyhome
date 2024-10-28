@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Hash's Dev Projects",
-  description: "A showcase of Hash's development projects",
+  title: "LionX Dev Projects",
+  description: "A showcase of LionX development projects",
 };
 
 export default function RootLayout({
